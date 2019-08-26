@@ -1,0 +1,23 @@
+Overview: make a flash card software that takes terms and definitions then
+serves them weighted by how often you get them wrong and last time served.
+Python storage in a text file on desktop.
+
+Flashcards:
+
+
+Challenges:
+
+
+
+Storage:
+
+
+Commands:
+
+
+include challenges such as listing all the days, ichinichi, hutaka, mikka, etc
+etc, for days of the week months etc,
+
+have text validation with override
+
+interfaces
