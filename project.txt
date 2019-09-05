@@ -1,19 +1,39 @@
 Overview: make a flash card software that takes terms and definitions then
 serves them weighted by how often you get them wrong and last time served.
-Python storage in a text file on desktop.
+
+
+Python storage in a text file on desktop:
+	storage is a json text file that is loaded on startup and updated on close
 
 Flashcards:
-
+	id: int
+	type: "flashcard"
+	front: string
+	back: string
+	lastserved: strip rep of python datetime
+	percentwrong: float
+	tags: string
 
 Challenges:
-
-
+	id: int
+	type: "challenge"
+	info: string
+	lastserved: string rep of python datetime
+	percentwrong: float
+	tags: string
 
 Storage:
+	json file using python builtins
 
+Core commands:
+	add: adds a flashcard or challenge
+	flashcards(int): gives you int number of flashcards based on percet wrong and last served
+	challenge(int): gives you int number of callenges based on percent wrong and last served 
 
-Commands:
-
+May include:
+	massUpload(string): takes a file name string and parses the file from human readable to dict then puts it in the 
+	json object.  
+	edit(int): allows you to edit card with id int
 
 include challenges such as listing all the days, ichinichi, hutaka, mikka, etc
 etc, for days of the week months etc,
