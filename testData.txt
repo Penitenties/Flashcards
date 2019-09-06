@@ -1,0 +1,1 @@
+[["0", {"type": "flashcard", "front": "hello", "back": "world", "lastserved": "time", "percetwrong": 0.5, "tags": "test"}]][]
