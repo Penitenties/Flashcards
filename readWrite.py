@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 #tabstop = 4 : python 3.6.5
 import json
+import sys
 
 #loads a json file from the path savefile  and turns puts it into the global arrays.
 def load(savefile):
 	try:
 		f = open(savefile, "r")
 	except FileNotFoundError:
-		makeSave()
+		makeSave(savefile)
+		f = open(savefile, "r")
 	contents = f.read()
 	f.close()
 	return initializefc(contents)
@@ -28,12 +30,13 @@ def initializefc(jsonString):
 	return result
 
 #creates a savefile if it does not exist
-def makeSave():
+def makeSave(savefile):
 	uin = "hi"
 	while (uin.lower() != "y") and (uin.lower() != "n"):
 		uin = input("You do not have a save file, create one? (y/n)")
 	if uin.lower is "n":
 		print("okay . . .")
+		sys.exit()
 	if uin.lower is "y":
 		f = open(savefile, "a")
 		f.close()	
