@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 import readWrite
-
+from Set import Set
+import addCards
 
 
 if __name__== "__main__":
 	readWrite.repopSave()
 	temp = readWrite.load("testData.txt")
-	flashcards = temp[0]
-	challenges = temp[1]
-	print(flashcards, challenges)
-	readWrite.write("testData.txt",flashcards, challenges)
-
+	f = temp[0]
+	c = temp[1]	
+	data = Set(f , c)
+	addCards.addCards(data)
+	readWrite.write("testData.txt", data.getf(), data.getc())

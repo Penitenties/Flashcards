@@ -43,9 +43,11 @@ def makeSave(savefile):
 
 #writes the flashcard and challenges global arrays into the save file	
 def write(savefile, flashcards, challenges):
-	fwrite = json.dumps(flashcards)
-	cwrite = json.dumps(challenges)
-	towrite = fwrite + cwrite		
+	towrite = ""
+	if flashcards is not None:
+		towrite += json.dumps(flashcards)
+	if challenges is not None:
+		towrite += json.dumps(challenges)		
 	f = open(savefile, "w+")
 	f.write(towrite)
 	f.close()
@@ -58,9 +60,3 @@ def repopSave():
 	f = open("testData.txt", "w")
 	f.write(towrite)
 	f.close()
-
-if __name__ == "__main__":
-	repopSave()
-	start()
-	print(flashcards)
-	write()

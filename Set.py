@@ -1,14 +1,7 @@
-import readWrite
-
-
-class data():
-	def __init__():
-		flashcards = None
-		challenges = None
-
-	def initialize(self, savefile):
-		self.flashcards = readWrite.load(savefile)[0]
-		self.challenges = readWrite.load(savefile)[1]
+class Set():
+	def __init__(self, f, c):
+		self.flashcards = f
+		self.challenges = c
 
 	def getf(self):
 		return self.flashcards
